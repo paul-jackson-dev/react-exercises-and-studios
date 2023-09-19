@@ -1,12 +1,17 @@
 import './styles.css';
 import Button from './Button';
+import oceans from'./oceans.json';
+
 
 
 function Profile()
 {
+   let ListItems = oceans.map( (ocean) => (
+      <h1 key={ocean.id}>{ocean.id}</h1>
+   ));
    return(
-      <>
-         <h3>Coming Soon! Profiles of Ocean creatures</h3>
+      <> 
+         <ListItems />
          <Button />
       </>  
    );
